@@ -4,7 +4,7 @@ import { assertObjectMatchSpec, countNestedProperties } from '../../../src/core/
 describe('core > assertions', () => {
     let clock: SinonFakeTimers
     beforeAll(() => {
-        clock = useFakeTimers(new Date('2018-04-01'))
+        clock = useFakeTimers(new Date('2018-04-01 00:00:00'))
     })
     afterAll(() => clock.restore())
 
@@ -691,7 +691,7 @@ describe('core > assertions', () => {
                 },
             ])
         }).toThrow(
-            `Expected property 'beginDate' to equal 'Aujourd'hui 2018-03-30 02h00', but found '2018-04-01': expected '2018-04-01' to deeply equal 'Aujourd\\'hui 2018-03-30 02h00'`
+            `Expected property 'beginDate' to equal 'Aujourd'hui 2018-03-30 12h00', but found '2018-04-01': expected '2018-04-01' to deeply equal 'Aujourd\\'hui 2018-03-30 12h00'`
         )
 
         expect(() => {

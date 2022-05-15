@@ -10,7 +10,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'pebie' || github.actor == 'Crow-EH' || github.actor == 'fthouraud' || github.actor == 'leguellec' || github.actor == 'rande' }}
+    if: ${{ github.actor == 'tienduy-nguyen' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
